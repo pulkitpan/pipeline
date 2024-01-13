@@ -6,10 +6,16 @@ pipeline
         stage('fetch')
         {
             steps{
-                  git 'https://github.com/pulkitpan/task.git'
+            git 'https://github.com/pulkitpan/task.git'
             }
         }
         
+        stage('build')
+        {
+            steps{
+            echo "Building..Phase"
+            }
+        }
         stage('Test')
         {
             steps{
